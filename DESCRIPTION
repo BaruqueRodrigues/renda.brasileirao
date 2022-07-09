@@ -1,0 +1,16 @@
+Package: rendas.brasileirao  
+Title: baixa rendas dos jogos do brasileirao
+Version: 0.0.1
+Authors@R: 
+    person("Baruque", "Rodrigues", , "quemuel.baruque@ufpe.br", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Baixa de maneira simplificada os dados das rendas do brasileirao.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    httr,
+    magrittr,
+    purrr,
+    tibble
