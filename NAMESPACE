@@ -2,5 +2,8 @@
 
 export("%>%")
 export(baixa_rendas_brasileirao)
+export(baixa_rendas_brasileirao_b)
+export(baixa_rendas_brasileirao_c)
+export(baixa_rendas_brasileirao_d)
 import(httr)
 importFrom(magrittr,"%>%")

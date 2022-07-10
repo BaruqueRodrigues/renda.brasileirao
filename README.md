@@ -4,7 +4,8 @@
 # rendas.brasileirão
 
 Pacote criado para baixar de forma automática as rendas dos times do
-brasileirão.
+brasileirão. Há também a possibilidade de baixar as rendas dos times de
+outras séries. Verifique as funções do pacote.
 
 # Formas de usar
 
@@ -15,8 +16,7 @@ execute a função abaixo.
 devtools::install_github("BaruqueRodrigues/renda.brasileirao")
 ```
 
-O uso é simples, você deve passar as rodadas que você tem interesse. Por
-enquanto o pacote só baixa os valores para o brasileirão de 2022.
+O uso é simples, você deve passar as rodadas que você tem interesse.
 
 A função baixa_rendas_brasileirao() retorna a um dataframe com as
 rodadas desejadas.
