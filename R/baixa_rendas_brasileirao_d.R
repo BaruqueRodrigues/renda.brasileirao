@@ -55,5 +55,5 @@ baixa_rendas_brasileirao_d <- function(n_rodadas){
   dados 
 }
 
-baixa_rendas_brasileirao_d(1) %>% View()
+
 
