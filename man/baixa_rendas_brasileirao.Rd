@@ -4,10 +4,12 @@
 \alias{baixa_rendas_brasileirao}
 \title{baixa as rendas dos jogos do brasileirão}
 \usage{
-baixa_rendas_brasileirao(n_rodadas)
+baixa_rendas_brasileirao(n_rodadas, ano)
 }
 \arguments{
 \item{n_rodadas}{vetor com número de rodadas}
+
+\item{ano}{ano do campeonato}
 }
 \value{
 dataframe com os dados sobre o financiamento das partidas do brasileirão
@@ -16,5 +18,5 @@ dataframe com os dados sobre o financiamento das partidas do brasileirão
 baixa as rendas dos jogos do brasileirão
 }
 \examples{
-baixa_rendas_brasileirao(1:15)
+baixa_rendas_brasileirao(1:15, 2022)
 }
