@@ -13,6 +13,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+options(scipen = 999)
+```
+
 # rendas.brasileirão
 
 Pacote criado para baixar de forma automática as rendas dos times do brasileirão. Há também a possibilidade de baixar as rendas dos times de outras séries. Verifique as funções do pacote.
@@ -29,17 +34,22 @@ O uso é simples, você deve passar as rodadas que você tem interesse.
 A função baixa_rendas_brasileirao() retorna a um dataframe com as rodadas desejadas.
 ```{r}
 rodadas <- 1:15
-
-df_rendas <- rendas.brasileirao::baixa_rendas_brasileirao(n_rodadas = rodadas)
+ano <- 2022
+df_rendas <- rendas.brasileirao::baixa_rendas_brasileirao(n_rodadas = rodadas, ano = ano)
 
 df_rendas
 ```
+O pacote permite a criação de tabela de visualização. Existem também funções para criação de tabelas de outras séries.
+
+```{r}
+df_rendas %>% 
+rendas.brasileirao::cria_tabela_serie_a(renda_liq, clubem, placarm_tn, placarv_tn,
+                                        "Renda Liquida")
+```
+
+
 
 A partir do dataset podemos construir algumas visualizações como a da renda bruta por time.
-```{r, echo=FALSE, message=FALSE}
-library(tidyverse)
-options(scipen = 999)
-```
 
 ```{r}
 df_rendas %>% 

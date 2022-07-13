@@ -11,7 +11,12 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     dplyr,
+    gt,
+    gtExtras,
     httr,
+    lubridate,
     magrittr,
     purrr,
+    stats,
+    stringr,
     tibble
