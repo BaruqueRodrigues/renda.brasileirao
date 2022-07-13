@@ -41,12 +41,15 @@ df_rendas
 ```
 O pacote permite a criação de tabela de visualização. Existem também funções para criação de tabelas de outras séries.
 
-```{r}
+```{r, eval=FALSE}
 df_rendas %>% 
 rendas.brasileirao::cria_tabela_serie_a(renda_liq, clubem, placarm_tn, placarv_tn,
-                                        "Renda Liquida")
+                                        "Renda Líquida")
 ```
 
+```{r, echo=FALSE}
+knitr::include_graphics("renda_liquida_tabela.png")
+```
 
 
 A partir do dataset podemos construir algumas visualizações como a da renda bruta por time.
