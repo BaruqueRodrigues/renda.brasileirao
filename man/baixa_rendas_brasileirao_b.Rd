@@ -4,10 +4,12 @@
 \alias{baixa_rendas_brasileirao_b}
 \title{baixa_rendas_brasileirao_b}
 \usage{
-baixa_rendas_brasileirao_b(n_rodadas)
+baixa_rendas_brasileirao_b(n_rodadas, ano)
 }
 \arguments{
 \item{n_rodadas}{vetor com número de rodadas}
+
+\item{ano}{ano do campeonato}
 }
 \value{
 dataframe com os dados sobre o financiamento das partidas da série B do brasileirão
@@ -16,5 +18,5 @@ dataframe com os dados sobre o financiamento das partidas da série B do brasile
 baixa_rendas_brasileirao_b
 }
 \examples{
-baixa_rendas_brasileirao_b(1:15)
+baixa_rendas_brasileirao_b(1:15, 2015)
 }
