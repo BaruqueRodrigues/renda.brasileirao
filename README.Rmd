@@ -51,6 +51,13 @@ rendas.brasileirao::cria_tabela_serie_a(renda_liq, clubem, placarm_tn, placarv_t
 knitr::include_graphics("renda_liquida_tabela.png")
 ```
 
+Também adicionamos a função que extraí as estatisticas dos times da série a
+
+```{r}
+statisticas_brasileirao_2019 <- rendas.brasileirao::pega_estatisticas(2019)
+
+glimpse(statisticas_brasileirao_2019)
+```
 
 A partir do dataset podemos construir algumas visualizações como a da renda bruta por time.
 
