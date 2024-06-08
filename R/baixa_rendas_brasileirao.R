@@ -13,10 +13,12 @@ baixa_rendas_brasileirao <- function(n_rodadas, ano){
   executa_download <- function(n_rodadas){
     #dataset com codigo dos campeonatos para a Série A
     
-    dados_ex <- dplyr::tibble(ano_camp = seq(2011, 2022, 1),
-                       id_fase = c(39, 1, 401, 660, 1031,
-                                   1374, 1638, 1869, 2322,
-                                   2584, 2804, 3109))
+    dados_ex <- dplyr::tibble(ano_camp = seq(2011, 2024, 
+                                             1), id_fase = c(39, 1, 401, 660,
+                                                             1031, 1374, 1638, 
+                                                             1869, 2322, 2584,
+                                                             2804, 3109, 3738,
+                                                             4323))
     
     
     id_fase <- dados_ex %>% 
@@ -39,24 +41,24 @@ baixa_rendas_brasileirao <- function(n_rodadas, ano){
     encode <- "form"
     
     response <-
-      VERB(
+      httr::VERB(
         "POST",
         url,
         body = payload,
-        add_headers(
+        httr::add_headers(
           authority = 'www.srgoool.com.br',
           accept_language = 'pt-BR,pt;q=0.9',
           origin = 'https://www.srgoool.com.br',
           referer = stringr::str_glue('https://www.srgoool.com.br/classificacao/Brasileirao/Serie-A/{ano}'),
           user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'),
         query = queryString,
-        content_type("application/x-www-form-urlencoded"),
-        accept("application/json, text/javascript, */*; q=0.01"),
-        set_cookies(`CookiePlacarFixo` = "1,43"),
+        httr::content_type("application/x-www-form-urlencoded"),
+        httr::accept("application/json, text/javascript, */*; q=0.01"),
+        httr::set_cookies(`CookiePlacarFixo` = "1,43"),
         encode = encode
       )
     
-    conteudo <-content(response, simplifyDataFrame = TRUE)
+    conteudo <- httr::content(response, simplifyDataFrame = TRUE)
     
     df_rendas <- conteudo$list 
   }
